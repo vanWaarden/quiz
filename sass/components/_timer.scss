@@ -1,0 +1,41 @@
+
+.time {
+    align-items: center; 
+    
+    &__counter {
+        display: none;
+    }
+
+    &__b-gauge {
+        width: 15rem; 
+        height : 3rem;
+        background-color: transparent;
+        border: .1rem solid var(--color-time-gauge);
+
+         /* Landscape */
+        @media only screen 
+            and (min-width: 500px) 
+            and (max-width: 1024px) 
+            and (orientation: landscape) 
+            and (-webkit-min-device-pixel-ratio: 1) {
+            height: 2rem;
+        }
+    }
+
+    &__gauge {
+        height : 3rem;
+        background-color: var(--color-time-gauge);
+        width: 15rem;
+        margin-top: -3rem;
+
+     /* Landscape */
+    @media only screen 
+    and (min-width: 500px) 
+    and (max-width: 1024px) 
+    and (orientation: landscape) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+        height: 2rem;
+        margin-top: -2rem;
+        }
+    }
+}

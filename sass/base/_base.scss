@@ -1,0 +1,133 @@
+:root{
+    
+// COLORS
+// General
+--color-off-white: #ecf5ff;
+--color-white: #fff;
+--color-black: #000;
+
+// shadow
+--shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+--shadow-light: 0 2rem 5rem rgba(0,0,0,.15);
+
+// Text colors
+--color-primary-lighter: rgb(152, 163, 221); 
+--color-primary-light: rgb(151, 142, 252);
+--color-primary: rgb(86,67,250);
+--color-primary-dark: rgb(14,39,101);
+--color-primary-darker: rgb(31, 23, 102); 
+
+// time gauge:
+--color-time-gauge: rgba(238, 176, 69, .5);
+
+// Button colors    
+--color-btn-blue-bg: var(--color-primary-dark, .9); 
+--color-btn-save-trans: rgba(14,39,101, .5);
+--color-twitter: #59adeb;
+--color-email: #f0a121;
+
+// form color:
+--color-input-placeholder: rgba(183, 180, 205, 0.5);
+
+// choice containers
+--color-choice-bg: rgba(86, 185, 235, .2);
+--color-choice-bor: rgba(141, 193, 238, 0.25);
+--color-correct-bg: rgba(88, 218, 52, .4);
+--color-correct-bor: rgb(88, 218, 52);
+--color-incorrect-bg: rgba(218, 97, 41, .4);
+--color-incorrect-bor: rgb(218, 97, 41);
+}
+
+*, 
+*:before, 
+*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; // to make 1rem = 10px, 10px/16px = 62.5%
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+}
+
+.background{
+    // max-width: 100vw; // 120rem;
+    box-shadow: var(--shadow-dark);
+    height: 100vh;
+    max-width: 100vw;
+    min-width: 100vw;
+    padding: 0;
+
+    @media only screen and (max-width: $bp-small) {
+        max-width: 100vw;
+    }
+
+    @media only screen and (max-width: $bp-xxsmall) {
+        min-height: 100vh;
+        padding: 0;
+        margin-top: 0;
+    }
+    
+    &--brain{
+        background-image: linear-gradient(
+            to bottom, 
+            rgba($color-primary, 0.9),
+            rgba($color-primary-darker, 0.8)), 
+            url(../img/brain.jpg); 
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100vh;
+        max-width: 100vw;
+        min-width: 100vw;
+        padding: 0;
+
+        @media only screen and (max-width: $bp-large) {
+            padding: 5rem;
+        }
+
+        @media only screen and (max-width: $bp-xsmall) {
+            background-image: -webkit-linear-gradient(
+                to bottom, 
+                rgba($color-primary, 0.9),
+                rgba($color-primary-darker, 0.8)), 
+                url(../img/brainsmall.jpg); 
+            background-image: linear-gradient(
+                to bottom, 
+                rgba($color-primary, 0.9),
+                rgba($color-primary-darker, 0.8)), 
+                url(../img/brainsmall.jpg); 
+            padding: 0;
+            background-size: cover;
+            height: 100vh;
+            min-width: 50%;
+            max-width: 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        @media only screen and (max-width: $bp-xxsmall) {
+            margin-top: 0;
+        }
+    }
+    /* background image for the highscores page. The image is also not visible in Safari browser unfortunatly */
+    &--highscores{
+        background-image: linear-gradient(to bottom, 
+        rgba($color-primary, 0.9),
+        rgba($color-primary-darker, 0.8)), 
+        url(../img/mountain.jpg); 
+        background-position: center center;
+        background-size: cover; 
+        max-width: 100vw;
+        min-width: 100vw;
+        background-attachment: fixed;
+    }
+}

@@ -1,0 +1,42 @@
+[
+    {
+        "question": "Which is the largest country in the world by area?",
+        "choice1": "China",
+        "choice2": "Russia",
+        "choice3": "United States of America",
+        "choice4": "Canada",
+        "answer": 2
+    },
+    {
+        "question": "Which is the largest ocean of the world?",
+        "choice1": "Atlantic ocean",
+        "choice2": "Indian ocean",
+        "choice3": "Pacific ocean",
+        "choice4": "Arctic ocean",
+        "answer": 3
+    },
+    {
+        "question": "Which is the smallest planet in our solar system?",
+        "choice1": "Mars",
+        "choice2": "Jupitor",
+        "choice3": "Pluto",
+        "choice4": "Mercury",
+        "answer": 4
+    },
+    {
+        "question": "Which country has the highest population?",
+        "choice1": "India",
+        "choice2": "Russia",
+        "choice3": "United States of America",
+        "choice4": "China",
+        "answer": 4
+    },
+    {
+        "question": "How many planets are there in the solar system?",
+        "choice1": "Eight",
+        "choice2": "Seven",
+        "choice3": "Six",
+        "choice4": "Nine",
+        "answer": 1
+    }
+]

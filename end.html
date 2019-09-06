@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Congrats!</title>
+</head>
+<body>
+    <main class="background">
+        <div class="background--brain flex-column">
+            <div id="end" class="section-score flex-column">
+                <h1 class="heading-primary" id="finalScore">0</h1>
+                <!-- form for users to submit their score if they want -->
+                <form class="form">
+                    <input 
+                    type="text"
+                    class="form__input"
+                    name="username"
+                    id="username"
+                    placeholder="Username"
+                    required>
+                    <label for="username" class="form__label">Username</label>
+                </form>
+                <button 
+                    type="submit" 
+                    class="btn btn--blue btn--save" 
+                    id="saveScoreBtn"
+                    onclick="saveHighScore(event)"
+                    disabled
+                    >Save
+                </button>
+                <a href="https://vanwaarden.github.io/quiz/game.html" class="btn btn--blue">Play Again</a>
+                <a href="https://vanwaarden.github.io/quiz/highscores.html" class="btn btn--blue">Highscores</a>
+            </div> <!-- #end .section-score .flex-column-->
+            <div class="cta">
+                <h3 class="heading-tertiary">Use the links below to challenge your friends! </h3>
+                <div class="btn__share" id="share">
+                    <!-- Share links go here -->	
+                </div> <!-- .btn__share #share-->
+            </div> <!-- .cta -->
+        </div> <!-- .background--brain .flex-column -->
+    </main> <!-- .background-->
+    <script src="js/end.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+ /* a spinning circle is shown to the user while the questions are loaded */
+
+.loader {
+    border: 1rem solid var(--color-white);
+    border-radius: 50%;
+    border-top: 1.6rem solid var(--color-primary);
+    width: 12rem;
+    height: 12rem;
+    animation: spin 2s linear infinite;
+}

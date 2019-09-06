@@ -1,0 +1,184 @@
+.section-game {
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-xsmall) {
+        justify-content: space-evenly; 
+    }
+}
+
+.section-questions {
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center; 
+    align-content: center;
+    margin-top: 3rem;
+
+       /* Landscape */
+       @media only screen 
+       and (min-width: 500px) 
+       and (max-width: 1024px) 
+       and (orientation: landscape) 
+       and (-webkit-min-device-pixel-ratio: 1) {
+       margin: 0;
+   }
+
+    @media only screen and (max-width: $bp-large) {
+        margin-top: 1rem;
+    }
+
+    @media only screen and (max-width: $bp-xsmall) {
+        width: 100vw; 
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+}
+
+.choice {
+    display: flex;
+    margin-bottom: 1rem;
+    width: 69%;
+    font-family: "Lato", sans-serif;
+    font-size: 2rem;
+    border: .1rem solid var(--color-choice-bor);
+    background-color: transparent;
+    letter-spacing: .1em;
+    border-radius: .5rem;
+    overflow: hidden;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-xlarge) {
+        width: 90%;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        width: 85%;
+    }
+
+    /* Landscape */
+    @media only screen 
+    and (min-width: 768px) 
+    and (max-width: 1024px) 
+    and (orientation: landscape) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+        max-width: 65%;
+        font-size: 1.5rem;
+    }
+
+    /* Landscape */
+    @media only screen 
+    and (min-width: 500px) 
+    and (max-width: 800px) 
+    and (orientation: landscape) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+        max-width: 75%;
+        font-size: 1.1rem;
+    }
+
+
+    @media only screen and (max-width: $bp-xsmall) {
+        width: 85%;
+        margin-bottom: 1.5rem;
+        height: 5.5rem;
+        letter-spacing: 1;
+        justify-content: center;
+        box-shadow: 0 .4rem 1.4rem 0 var(--color-primary-darker, 0.8);
+        background-color: var(--color-choice-bg);
+        border-radius: .5rem;
+    }
+
+    &:last-child{
+        margin-bottom: 5rem;
+        @media only screen and (max-width: $bp-xsmall) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &:hover{
+        cursor: pointer;
+        box-shadow: 0 .4rem 1.4rem 0 var(--color-primary-darker, 0.8);
+        background-color: var(--color-choice-bg);
+        transform: translateY(-.2rem);
+        transition: transform 150ms;
+        border-radius: .5rem;
+    }
+
+    &:active {
+        box-shadow: 0 .4rem 1.4rem 0 var(--color-primary-darker, .2);
+        transform: translateY(.1rem);
+        transition: transform 150ms;
+        border-radius: .5rem;
+    }
+
+    &__prefix{
+        padding: 1.5rem 2.5rem;
+        background-color: var(--color-primary-darker, .7); 
+        color: var(--color-white);
+        height: 15%;
+        margin: 0;
+
+        /* Landscape */
+        @media only screen 
+        and (min-width: 500px) 
+        and (max-width: 800px) 
+        and (orientation: landscape) 
+        and (-webkit-min-device-pixel-ratio: 1) {
+        padding: 1rem 1.5rem;
+    }
+
+        @media only screen and (max-width: $bp-xsmall) {
+            font-weight: 300;
+            height: unset;
+            text-align: center;
+            overflow: hidden;
+            padding: 3rem;
+            margin-left: 3rem;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__text {
+        padding: 1.5rem 2.5rem;
+        flex: 0 0 100%;
+        color: var(--color-white);
+        font-weight: 300;
+        margin: 0;
+
+         /* Landscape */
+        @media only screen 
+        and (min-width: 500px) 
+        and (max-width: 800px) 
+        and (orientation: landscape) 
+        and (-webkit-min-device-pixel-ratio: 1) {
+        padding: .5rem;
+    }
+
+        @media only screen and (max-width: $bp-xsmall) {
+            padding: .5rem 1rem; 
+            line-height: 1.1;
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+    }
+
+    &.choice--correct {
+        border-color: var(--color-correct-bor);
+        background-color: var(--color-correct-bg);
+    }
+
+    &.choice--incorrect {
+        border-color: var(--color-incorrect-bor);
+        background-color: var(--color-incorrect-bg);
+    }
+}
+
+#score {
+    display: none;
+}
+
+
+
+
+

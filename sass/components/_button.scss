@@ -1,0 +1,130 @@
+.btn {
+    box-sizing: content-box;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 2rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.4rem;
+    width: 15rem;
+    cursor: pointer;
+
+    @media only screen and (max-width: $bp-xsmall) {
+        font-size: 1rem;
+        padding: .5rem;
+        width: 7rem;
+    }
+    
+    &:hover {
+        box-shadow: 0 1rem 2rem var(--color-black, .5);
+        animation-name: btns;
+        animation-duration: 3s;
+
+        &::after {
+            opacity: 0;
+        } 
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        box-shadow: 0 .5rem 1rem var(--color-black, .15);
+        transform: translateY(0);
+    }
+
+    &--blue {
+        border: .05rem solid var(--color-primary);
+        color: var(--color-off-white);
+        background-color: var(--color-primary-darker);
+        text-align: center;
+        margin-top: 1rem;
+
+        &::after {
+            background-color: var(--color-white);
+        }
+    }
+
+    &--save:disabled {
+        background-color: var(--color-btn-save-trans);
+        border: none;
+
+        &:hover{
+            animation: unset;
+            box-shadow: none;
+            cursor: initial;
+        }
+    }
+        
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+    
+    &--email,
+    &--twitter {
+        background-repeat: no-repeat;
+        background-size: 25px 25px;
+        background-position: 7% 50%;
+        font-weight: 400; 
+        color: var(--color-white);
+        flex: 0 1 15rem;
+        text-align: center;
+        padding-left: 5rem;
+
+        @media only screen and (max-width: $bp-large) {
+            padding: 1rem;
+            background-size: 0;
+        }
+
+        @media only screen and (max-width: $bp-xsmall) {
+           flex: 0 1 13rem;
+        }
+
+        &:hover {
+            border-color: transparent;
+            animation: unset;
+        }
+
+        &:active {
+            box-shadow: 0 .5rem 1rem var(--color-black, .15);
+            transform: translateY(0);
+        }
+
+    }
+
+    &--email {
+        background-color: var(--color-email);
+        background-image: url(../img/iconemail.svg); 
+        border: 1px solid var(--color-email);
+
+        @media only screen and (max-width: $bp-large) {
+            background-image: none;
+        }
+    }
+
+    &--twitter {
+        background-color: var(--color-twitter);
+        background-image: url(../img/icontwitter.svg);
+        border: 1px solid var(--color-twitter);
+
+        @media only screen and (max-width: $bp-large) {
+            background-image: none;
+            margin-left: 1rem;
+        }
+
+        @media only screen and (max-width: $bp-xsmall) {
+            margin-left: 2rem;
+        }
+    }
+}  
+

@@ -1,0 +1,33 @@
+// text slides in from bottom to top
+@keyframes moveInBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(50rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+// button change color when hovered
+@keyframes btns {
+    from {
+        background-color: var(--color-primary, .5);
+        color: var(--color-off-white);
+    }
+    to {
+        background-color: var(--color-off-white);
+        color: var(--color-primary);
+    }
+}
+
+// loader spins when questions are fetched from local storage
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
